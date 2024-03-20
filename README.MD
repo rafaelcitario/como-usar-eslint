@@ -1,28 +1,44 @@
-# como utilizar o eslint
+# Como utilizar o eslint
 
- vamos iniciar instalando o eslint em nosso projeto.
- se você estiver usando npm ```npm init @eslint/config```
- se você estiver usando yarn ```yarn init @eslint/config```
- se você estiver usando pnpm ```pnpm init @eslint/config```
+Vamos iniciar instalando o eslint em nosso projeto.
+Se você estiver usando **NPM** 
+```npm init @eslint/config```
+
+Se você estiver usando **YARN** 
+```yarn init @eslint/config```
+
+Se você estiver usando **PNPM** 
+```pnpm init @eslint/config```
 
 __os comandos acima fornecem uma instalação rapida.__
 
- também é possivel instalar utilizando o comando ```install``` ou ```i```
+Também é possivel instalar utilizando o comando 
+```install```
+ou
+```i```
 
-__no explo abaixo estou instalando o eslint junto com as configurações @rocketseat .__
+__No explo abaixo estou instalando o eslint junto com as configurações @rocketseat .__
 
- pnpm: ```pnpm add eslint @rocketseat/eslint-config```
+ **PNPM**: ```pnpm add eslint @rocketseat/eslint-config```
 
-## apos instalação
+## Apos instalação
 
-caso você tenha feito a isntalação atraves do yarn ou npm é bem provavel que o arquivo ```.eslintrc``` tenha sido criado na raiz da sua aplicação.
+Caso você tenha feito a isntalação atraves do yarn ou npm é bem provavel que o arquivo ```.eslintrc``` tenha sido criado na raiz da sua aplicação.
 
-caso não tenha, criaremos manualmente este arquivo.
+Caso não tenha, criaremos manualmente este arquivo.
 
- o arquivo ```.eslintrc``` suporta formatos ```{.js, .json. yaml}```
-__abaixo utilizaremos ```.eslintrc.json``` .__
+O arquivo ```.eslintrc``` suporta formatos 
+```json
 
- com o arquivo ```.eslintrc.json``` criado, utilizamos as seguintes configurações:
+{
+ .js,
+ .json, 
+ .yaml}
+
+```
+__Abaixo utilizaremos ```.eslintrc.json``` .__
+
+Com o arquivo ```.eslintrc.json``` criado, utilizamos as seguintes configurações:
 
 ```json
 
@@ -39,7 +55,7 @@ __abaixo utilizaremos ```.eslintrc.json``` .__
 }
 ```
 
- caso você tenha criado o arquivo ```{.js}```
+Caso você tenha criado o arquivo ```{.js}```
 
 ```json
 module.exports = {
@@ -55,18 +71,27 @@ module.exports = {
 }
 ```
 
- como optei por utilizar a configuração da ```@rocketseat``` então precisamos passar algumas configurações.
+Como optei por utilizar a configuração da ```@rocketseat``` então precisamos passar algumas configurações.
 
- em ```json {"extends": }``` passaremos o valor:  
+Em 
+
+```json
+
+{"extends": }
+
+```
+
+Passaremos o valor:  
 
 ```json
 {"extends": ["@rocketseat/eslint-config/node"]}
 
 ```
 
- mas de onde veio esta configuração?
+Mas de onde veio esta configuração?
 
- após a instalação do pacote ```@rocketseat/eslint-config``` podemos olhar dentro de nossa pasta ```node_modules/```
+Após a instalação do pacote ```@rocketseat/eslint-config``` podemos olhar dentro de nossa pasta ```node_modules/```
+
 
 ```shell
 . <-- nossa pasta raiz
@@ -78,18 +103,18 @@ module.exports = {
           ├── Readme.md
 ```
 
- navegando entre os diretorios, encontramos a estrutura de pastas acima contendo 3 arquivos
+Navegando entre os diretorios, encontramos a estrutura de pastas acima contendo 3 arquivos
 ```next.js```,
 ```node.js```,
 ```react.js```
 
- estes arquivos é o que chamaremos em `@rocketseat/eslint-config/{'o arquivo desejado'}`
+Estes arquivos é o que chamaremos em `@rocketseat/eslint-config/{'o arquivo desejado'}`
 
- caso fique em duvida, você também encontra um ```README.MD``` que pode ajudar a entender melhor cada configuração.
+Caso fique em duvida, você também encontra um ```README.MD``` que pode ajudar a entender melhor cada configuração.
 
 ## configuração package.json
 
- em scripts adicionamos:
+Em scripts adicionamos:
 
 ```json
 "lint": "eslint src --ext .ts --fix"
