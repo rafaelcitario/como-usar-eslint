@@ -2,7 +2,9 @@
 
 ## Instalando ESLint no seu projeto
 
-Vamos começar instalando o ESLint em nosso projeto. Se estiver utilizando npm:
+Vamos começar instalando o ESLint em nosso projeto. 
+
+Se estiver utilizando npm:
 
 ```bash
 npm init @eslint/config
