@@ -1,5 +1,3 @@
-Aqui está o texto corrigido sem alterar a formatação:
-
 # Como utilizar o ESLint
 
 Vamos iniciar instalando o ESLint em nosso projeto.
